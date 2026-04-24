@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { GastoLeadsChart, CpaChart } from "./components/Charts";
 
 export default function Home() {
   const [view, setView] = useState<"login" | "dashboard">("login");
@@ -211,6 +212,10 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+                <div className="grid grid-cols-2 gap-3">
+  <GastoLeadsChart />
+  <CpaChart />
+</div>
 
                 <div className="rounded-2xl overflow-hidden" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
                   <div className="px-5 py-4 flex items-center justify-between" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
